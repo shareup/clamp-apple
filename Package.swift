@@ -2,19 +2,19 @@
 import PackageDescription
 
 let package = Package(
-    name: "Clamped",
+    name: "Clamp",
     products: [
         .library(
-            name: "Clamped",
-            targets: ["Clamped"]),
+            name: "Clamp",
+            targets: ["Clamp"]),
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "Clamped",
+            name: "Clamp",
             dependencies: []),
         .testTarget(
-            name: "ClampedTests",
-            dependencies: ["Clamped"]),
+            name: "ClampTests",
+            dependencies: ["Clamp"]),
     ]
 )

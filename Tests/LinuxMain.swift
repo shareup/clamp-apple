@@ -1,8 +1,8 @@
 import XCTest
 
-import ClampedTests
+import ClampTests
 
 var tests = [XCTestCaseEntry]()
-tests += BinaryFloatingPointClampedTests.allTests()
-tests += BinaryIntegerClampedTests.allTests()
+tests += BinaryFloatingPointClampTests.allTests()
+tests += BinaryIntegerClampTests.allTests()
 XCTMain(tests)
