@@ -30,7 +30,7 @@ To use Clamp with the Swift Package Manager, add a dependency to your Package.sw
 ```swift
 let package = Package(
   dependencies: [
-    .package(name: "Clamp", url: "https://github.com/shareup/clamp-apple.git", .upToNextMajor(from: "1.0.0"))
+    .package(name: "Clamp", url: "https://github.com/shareup/clamp-apple.git", .upToNextMajor(from: "2.0.0"))
   ]
 )
 ```
