@@ -1,5 +1,5 @@
-import XCTest
 import Clamp
+import XCTest
 
 final class BinaryIntegerClampTests: XCTestCase {
     func testClampedToLowerAndUpperBounds() throws {
@@ -7,17 +7,17 @@ final class BinaryIntegerClampTests: XCTestCase {
         XCTAssertEqual(1, 0.clamped(lowerBound: 1, upperBound: 10))
         XCTAssertEqual(10, 11.clamped(lowerBound: 1, upperBound: 10))
     }
-    
+
     func testClampedToClosedRange() throws {
         let range = ClosedRange<Int>(uncheckedBounds: (1, 10))
         XCTAssertEqual(5, 5.clamped(to: range))
         XCTAssertEqual(1, 0.clamped(to: range))
         XCTAssertEqual(10, 11.clamped(to: range))
-        XCTAssertEqual(10, 11.clamped(to: 1...10))
+        XCTAssertEqual(10, 11.clamped(to: 1 ... 10))
     }
 
     func testClampToLowerAndUpperBounds() throws {
-        var integer: Int = 5
+        var integer = 5
 
         integer.clamp(lowerBound: 1, upperBound: 10)
         XCTAssertEqual(5, integer)
@@ -30,15 +30,15 @@ final class BinaryIntegerClampTests: XCTestCase {
     }
 
     func testClampToClosedRange() throws {
-        var integer: Int = 5
+        var integer = 5
 
-        integer.clamp(to: 1...10)
+        integer.clamp(to: 1 ... 10)
         XCTAssertEqual(5, integer)
 
-        integer.clamp(to: 1...4)
+        integer.clamp(to: 1 ... 4)
         XCTAssertEqual(4, integer)
 
-        integer.clamp(to: 10...20)
+        integer.clamp(to: 10 ... 20)
         XCTAssertEqual(10, integer)
     }
 

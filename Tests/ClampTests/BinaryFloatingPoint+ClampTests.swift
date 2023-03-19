@@ -1,5 +1,5 @@
-import XCTest
 import Clamp
+import XCTest
 
 final class BinaryFloatingPointClampTests: XCTestCase {
     func testClampedToLowerAndUpperBounds() throws {
@@ -7,7 +7,7 @@ final class BinaryFloatingPointClampTests: XCTestCase {
         XCTAssertEqual(1.0, Double(0).clamped(lowerBound: 1, upperBound: 10))
         XCTAssertEqual(10, Double(11).clamped(lowerBound: 1, upperBound: 10))
     }
-    
+
     func testClampedToClosedRange() throws {
         let range = ClosedRange<Double>(uncheckedBounds: (1, 10))
         XCTAssertEqual(5.0, Double(5).clamped(to: range))
@@ -31,16 +31,16 @@ final class BinaryFloatingPointClampTests: XCTestCase {
     func testClampToClosedRange() throws {
         var double: Double = 5
 
-        double.clamp(to: 1...10)
+        double.clamp(to: 1 ... 10)
         XCTAssertEqual(5, double)
 
-        double.clamp(to: 1...4)
+        double.clamp(to: 1 ... 4)
         XCTAssertEqual(4, double)
 
-        double.clamp(to: 10...20)
+        double.clamp(to: 10 ... 20)
         XCTAssertEqual(10, double)
     }
-    
+
     static var allTests = [
         ("testClampedToLowerAndUpperBounds", testClampedToLowerAndUpperBounds),
         ("testClampedToClosedRange", testClampedToClosedRange),

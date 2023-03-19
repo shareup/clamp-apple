@@ -4,7 +4,7 @@ public extension BinaryInteger {
     func clamped(to range: ClosedRange<Self>) -> Self {
         clamped(lowerBound: range.lowerBound, upperBound: range.upperBound)
     }
-    
+
     func clamped(lowerBound: Self, upperBound: Self) -> Self {
         var copy = self
         copy.clamp(lowerBound: lowerBound, upperBound: upperBound)
